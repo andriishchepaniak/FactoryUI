@@ -6,7 +6,7 @@ const Configuration = (props) => {
       console.log(event.target.value);
       props.setConfiguration({
           ...props.configuration,
-          engineCreatorsCount: event.target.value !== "" ? parseInt(event.target.value) : 1
+          engineCreatorsCount: event.target.value !== "" ? parseInt(event.target.value) : 0
       });
       console.log(props.configuration);
   }
@@ -14,56 +14,56 @@ const Configuration = (props) => {
   const handleBodyCreatorsCountChange = (event) => {
     props.setConfiguration({
         ...props.configuration,
-        bodyCreatorsCount: event.target.value !== "" ? parseInt(event.target.value) : 1
+        bodyCreatorsCount: event.target.value !== "" ? parseInt(event.target.value) : 0
     });
   }
 
   const handleAccCreatorsCountChange = (event) => {
     props.setConfiguration({
         ...props.configuration,
-        accessoriesCreatorsCount: event.target.value !== "" ? parseInt(event.target.value) : 1
+        accessoriesCreatorsCount: event.target.value !== "" ? parseInt(event.target.value) : 0
     });
   }
 
   const handleCarFactoryCountChange = (event) => {
     props.setConfiguration({
         ...props.configuration,
-        carFactoryCount: event.target.value !== "" ? parseInt(event.target.value) : 1
+        carFactoryCount: event.target.value !== "" ? parseInt(event.target.value) : 0
     });
   }
 
   const handleDealersCountChange = (event) => {
     props.setConfiguration({
         ...props.configuration,
-        dealersCount: event.target.value !== "" ? parseInt(event.target.value) : 1
+        dealersCount: event.target.value !== "" ? parseInt(event.target.value) : 0
     });
   }
 
   const handleEngineWarehouseCapacityChange = (event) => {
     props.setConfiguration({
         ...props.configuration,
-        engineWarehouseCapacity: event.target.value !== "" ? parseInt(event.target.value) : 1
+        engineWarehouseCapacity: event.target.value !== "" ? parseInt(event.target.value) : 0
     });
   }
 
   const handleBodyWarehouseCapacityChange = (event) => {
     props.setConfiguration({
         ...props.configuration,
-        bodyWarehouseCapacity: event.target.value !== "" ? parseInt(event.target.value) : 1
+        bodyWarehouseCapacity: event.target.value !== "" ? parseInt(event.target.value) : 0
     });
   }
 
   const handleAccessoriesWarehouseCapacityChange = (event) => {
     props.setConfiguration({
         ...props.configuration,
-        accessoriesWarehouseCapacity: event.target.value !== "" ? parseInt(event.target.value) : 1
+        accessoriesWarehouseCapacity: event.target.value !== "" ? parseInt(event.target.value) : 0
     });
   }
 
   const handleCarWarehouseCapacityChange = (event) => {
     props.setConfiguration({
         ...props.configuration,
-        carWarehouseCapacity: event.target.value !== "" ? parseInt(event.target.value) : 1
+        carWarehouseCapacity: event.target.value !== "" ? parseInt(event.target.value) : 0
     });
   }
 

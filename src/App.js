@@ -38,7 +38,7 @@ function App() {
         // setInterval(() => {
         //   getState();
         // }, 2000);
-        console.log(response.data);
+        console.log("Run");
       }
     });
   };
