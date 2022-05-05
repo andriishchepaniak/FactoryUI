@@ -182,8 +182,10 @@ const Configuration = (props) => {
         />
       </div>
       <div class="col-auto">
-        <button onClick={configureClick} class="btn btn-primary" type="button">
-          Configure
+        <div style={{height: 24 + 'px'}}>
+        </div>
+        <button onClick={configureClick} class="btn btn-outline-danger" type="button">
+          Run
         </button>
       </div>
     </form>
