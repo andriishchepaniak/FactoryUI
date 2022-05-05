@@ -41,3 +41,15 @@
   max-height: 300px;
   overflow-y: auto;
 }
+
+.scrollWareHouase {
+  max-height: 388px;
+  min-height: 388px;
+  overflow-y: auto;
+}
+
+.scrollDealers {
+  max-height: 792px;
+  min-height: 792px;
+  overflow-y: auto;
+}

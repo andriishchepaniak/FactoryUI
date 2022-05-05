@@ -54,7 +54,7 @@ const PartFactory = (props) => {
   });
 
   return (
-    <div className="card border-primary mt-3">
+    <div className="card scrollWareHouase border-primary mt-3">
       <div className="card-body">
         <h5 className="card-title">{props.partName}</h5>
         {partsCreators}

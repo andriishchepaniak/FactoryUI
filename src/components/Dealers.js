@@ -71,7 +71,7 @@ const Dealers = (props) => {
   });
 
   return (
-    <div className="card border-primary mt-3">
+    <div className="card scrollDealers border-primary mt-3">
       <div class="card-header">Dealers</div>
       <div className="card-body">{dealers}</div>
     </div>

@@ -25,6 +25,12 @@ function App() {
     });
   }, []);
 
+  
+  useEffect(() => {
+    if(state !== null)
+      getState();
+  }, [state]);
+
   const getState = () => {
     workerService.getState().then((response) => {
       console.log(response.data);
@@ -35,9 +41,7 @@ function App() {
   const run = () => {
     workerService.run().then((response) => {
       if (response.status === 200) {
-        // setInterval(() => {
-        //   getState();
-        // }, 2000);
+        getState()
         console.log("Run");
       }
     });
@@ -89,12 +93,6 @@ function App() {
           <div className="col">
             <button className="btn btn-outline-danger" onClick={() => run()}>
               Run
-            </button>
-            <button
-              className="btn btn-outline-danger"
-              onClick={() => getState()}
-            >
-              Get state
             </button>
             {configuration !== null ? (
               <Configuration
