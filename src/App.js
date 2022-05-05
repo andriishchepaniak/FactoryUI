@@ -28,7 +28,9 @@ function App() {
   
   useEffect(() => {
     if(state !== null)
-      getState();
+      setTimeout(() => {
+        getState();
+      }, 200)
   }, [state]);
 
   const getState = () => {
@@ -137,6 +139,7 @@ function App() {
             </div>
             <div className="col">
               <PartWarehouse
+                capacity={configuration.engineWarehouseCapacity}
                 partIcon={<SiCoronaengine size={30} />}
                 partName="Engines"
                 warehouseNumbers={state.warehouseEnginesNumbers}
@@ -145,6 +148,7 @@ function App() {
               />
 
               <PartWarehouse
+                capacity={configuration.accessoriesWarehouseCapacity}
                 partIcon={<GiCarWheel size={30} />}
                 partName="Acc-s"
                 warehouseNumbers={state.warehouseAccessoriesNumbers}
@@ -153,6 +157,7 @@ function App() {
               />
 
               <PartWarehouse
+                capacity={configuration.bodyWarehouseCapacity}
                 partIcon={<IoCarSportOutline size={30} />}
                 partName="Bodies"
                 warehouseNumbers={state.warehouseBodiesNumbers}
@@ -170,6 +175,7 @@ function App() {
               />
 
               <CarWarehouse
+                capacity={configuration.carWarehouseCapacity}
                 carIcon={<IoCarSport size={35} />}
                 engineIcon={<SiCoronaengine size={30} />}
                 accIcon={<GiCarWheel size={30} />}

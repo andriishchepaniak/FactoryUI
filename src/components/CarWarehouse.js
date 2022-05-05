@@ -26,7 +26,7 @@ const CarWarehouse = (props) => {
 
   return (
     <div className="card scrollWareHouase border-primary mt-3">
-      <div class="card-header">{props.warehouseCarsNumbers} / 5</div>
+      <div class="card-header">{props.warehouseCarsNumbers} / {props.capacity}</div>
       <div className="card-body">
         <h5 className="card-title">Cars warehouse</h5>
         <div className="row">

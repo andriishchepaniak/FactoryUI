@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const PartFactory = (props) => {
 
-  var arr = []
-  props.partCreatedNumbers.forEach(element => {
-    arr.push(3);
-  });
+  var [partCreateTimes, setPartCreateTimes] = useState([]);
+  
+  useEffect(() => {
+    var arr = []
+    props.partCreatedNumbers.forEach(element => {
+      arr.push(5);
+    });
+
+    setPartCreateTimes(arr);
+  }, [])
+  
 
 
-  var [partCreateTimes, setPartCreateTimes] = useState(arr);
 
   const handleChangePartCreateTime = (e, index) => {
     setPartCreateTimes(prevState => {
@@ -48,6 +54,7 @@ const PartFactory = (props) => {
             step="1" 
             id="customRange3">
             </input>
+            <p className="card-text">{partCreateTimes[index]}</p>
         </div>
       </div>
     );
