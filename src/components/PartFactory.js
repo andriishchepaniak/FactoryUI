@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 const PartFactory = (props) => {
   
-  var [val, setVal] = useState(true);
   var [partCreateTimes, setPartCreateTimes] = useState([]);
   
   
@@ -53,13 +52,16 @@ const PartFactory = (props) => {
   });
 
   useEffect(() => {
-    var arr = []
-    props.partCreatedNumbers.forEach(element => {
-      arr.push(5);
-    });
+    if(props.val){
+      var arr = []
+      props.partCreatedNumbers.forEach(element => {
+        arr.push(5);
+      });
 
-    setPartCreateTimes(arr);
-  }, [])
+      setPartCreateTimes(arr);
+      props.setVal(false)
+  }
+  }, [props.partCreatedNumbers])
 
   return (
     <div className="card scrollWareHouase border-primary mt-3">

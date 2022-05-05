@@ -15,6 +15,7 @@ import Configuration from "./components/Configuration";
 
 function App() {
   var [state, setState] = useState(null);
+  var [val, setVal] = useState(false)
 
   var [configuration, setConfiguration] = useState(null);
 
@@ -45,6 +46,7 @@ function App() {
       workerService.run().then((response) => {
         if (response.status === 200) {
           getState()
+          setVal(true)
           console.log("Run");
         }
       });
@@ -114,6 +116,8 @@ function App() {
             <div className="col">
               <PartFactory
                 configureTime={configureEnginesCreatesTime}
+                val={val}
+                setVal={setVal}
                 partIcon={<SiCoronaengine size={30} />}
                 partName="Engines"
                 partCreatedNumbers={state.engineCreatedNumbers}
@@ -122,6 +126,8 @@ function App() {
 
               <PartFactory
                 configureTime={configureAccessoriesCreatesTime}
+                val={val}
+                setVal={setVal}
                 partIcon={<GiCarWheel size={30} />}
                 partName="Acc-s"
                 partCreatedNumbers={state.accessoriesCreatedNumbers}
@@ -130,6 +136,8 @@ function App() {
 
               <PartFactory
                 configureTime={configureBodiesCreatesTime}
+                val={val}
+                setVal={setVal}
                 partIcon={<IoCarSportOutline size={30} />}
                 partName="Bodies"
                 partCreatedNumbers={state.bodyCreatedNumbers}
@@ -167,6 +175,8 @@ function App() {
             <div className="col">
               <PartFactory
                 configureTime={configureCarFactoriesCreatesTime}
+                val={val}
+                setVal={setVal}
                 partIcon={<IoCarSport size={30} />}
                 partName="Cars"
                 partCreatedNumbers={state.carBuiltNumbers}
@@ -187,6 +197,8 @@ function App() {
             <div className="col">
               <Dealers
                 configureRequestTime={configureDealersRequestTime}
+                val={val}
+                setVal={setVal}
                 dealerIcon={<FaUserTie size={40} />}
                 carIcon={<IoCarSport size={40} />}
                 engineIcon={<SiCoronaengine size={30} />}

@@ -1,15 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 const Dealers = (props) => {
+  var [dealersRequestTime, setdealersRequestTime] = useState([]);
 
-  var arr = []
-  props.dealers.forEach(element => {
-    arr.push(3);
-  });
-
-
-  var [dealersRequestTime, setdealersRequestTime] = useState(arr);
+  
 
   const handleDealerRequestTime = (e, index) => {
     setdealersRequestTime(prevState => {
@@ -27,6 +22,17 @@ const Dealers = (props) => {
     console.log(dealersRequestTime);
     props.configureRequestTime(index, dealersRequestTime[index]);
   }
+
+  useEffect(() => {
+    if(props.val){
+      var arr = []
+      props.dealers.forEach(element => {
+        arr.push(5);
+      });
+      setdealersRequestTime(arr)
+      props.setVal(false)
+  }
+  }, [props.dealers])
   
   var dealers = props.dealers.map((dealer, index) => {
     return (
@@ -45,6 +51,7 @@ const Dealers = (props) => {
             step="1" 
             id="customRange3">
             </input>
+            <p className="card-text">{dealersRequestTime[index]}</p>
           {dealer.cars.map((car) => {
             return (
               <div className="card border-primary mt-3">
