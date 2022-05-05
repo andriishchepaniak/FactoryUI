@@ -40,12 +40,14 @@ function App() {
     });
   };
 
-  const run = () => {
-    workerService.run().then((response) => {
-      if (response.status === 200) {
-        getState()
-        console.log("Run");
-      }
+  const run = (conf) => {
+    configureService.configureInputData(conf).then(() => {
+      workerService.run().then((response) => {
+        if (response.status === 200) {
+          getState()
+          console.log("Run");
+        }
+      });
     });
   };
 
@@ -93,14 +95,11 @@ function App() {
       <div className="container">
         <div className="row mt-3 justify-content-center">
           <div className="col">
-            <button className="btn btn-outline-danger" onClick={() => run()}>
-              Run
-            </button>
             {configuration !== null ? (
               <Configuration
                 configuration={configuration}
                 setConfiguration={setConfiguration}
-                configureInputData={configureService.configureInputData}
+                configureInputData={(conf) => run(conf)}
               />
             ) : (
               <div>Loading</div>
@@ -199,7 +198,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <div>Please, click get state</div>
+        <div>Please, click run</div>
       )}
     </div>
   );
