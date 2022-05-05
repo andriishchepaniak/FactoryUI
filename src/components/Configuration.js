@@ -75,7 +75,7 @@ const Configuration = (props) => {
     <form class="row g-3 mt-3">
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          engineCreatorsCount
+          Engine Creators Count
         </label>
         <input
           type="text"
@@ -87,7 +87,7 @@ const Configuration = (props) => {
       </div>
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          bodyCreatorsCount
+          Body Creators Count
         </label>
         <input
           type="text"
@@ -99,7 +99,7 @@ const Configuration = (props) => {
       </div>
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          accessoriesCreatorsCount
+          Accessories Creators Count
         </label>
         <input
           type="text"
@@ -111,7 +111,7 @@ const Configuration = (props) => {
       </div>
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          carFactoryCount
+          Car Factory Count
         </label>
         <input
           type="text"
@@ -123,7 +123,7 @@ const Configuration = (props) => {
       </div>
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          dealersCount
+          Dealers Count
         </label>
         <input
           type="text"
@@ -135,7 +135,7 @@ const Configuration = (props) => {
       </div>
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          engineWarehouseCapacity
+          Engine Warehouse Capacity
         </label>
         <input
           type="text"
@@ -147,7 +147,7 @@ const Configuration = (props) => {
       </div>
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          bodyWarehouseCapacity
+          Body Warehouse Capacity
         </label>
         <input
           type="text"
@@ -159,7 +159,7 @@ const Configuration = (props) => {
       </div>
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          accessoriesWarehouseCapacity
+          Accessories Warehouse Capacity
         </label>
         <input
           type="text"
@@ -171,7 +171,7 @@ const Configuration = (props) => {
       </div>
       <div class="col-auto">
         <label htmlFor="staticEmail2" class="visually">
-          carWarehouseCapacity
+          Car Warehouse Capacity
         </label>
         <input
           type="text"

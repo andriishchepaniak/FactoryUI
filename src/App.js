@@ -210,7 +210,9 @@ function App() {
           </div>
         </div>
       ) : (
-        <div>Please, click run</div>
+        <div style={{marginTop: 30 + 'px'}}>
+          <h2>Please, click run</h2>
+        </div>
       )}
     </div>
   );
