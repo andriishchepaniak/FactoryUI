@@ -15,35 +15,35 @@ export const configureService = {
     configureEnginesCreateTime: (id, time) => {
         return axios.post("https://localhost:7079/api/configure/EnginesCreateTime", {
             id: id,
-            creationTime: time * 1000
+            creationTime: (time * 1000)
         });
     },
 
     configureAccessoriesCreateTime: (id, time) => {
         return axios.post("https://localhost:7079/api/configure/AccessoriesCreateTime", {
             id: id,
-            creationTime: time * 1000
+            creationTime: (time * 1000)
         });
     },
 
     configureBodiesCreateTime: (id, time) => {
-        return axios.post("https://localhost:7079/api/configure/EnginesCreateTime", {
+        return axios.post("https://localhost:7079/api/configure/BodiesCreateTime", {
             id: id,
-            creationTime: time * 1000
+            creationTime: (time * 1000)
         });
     },
 
     configureCarFactoriesCreateTime: (id, time) => {
         return axios.post("https://localhost:7079/api/configure/CarFactoriesCreateTime", {
             id: id,
-            creationTime: time * 1000
+            creationTime: (time * 1000)
         });
     },
 
     configureDealersRequestTime: (id, time) => {
         return axios.post("https://localhost:7079/api/configure/DealersRequestTime", {
             id: id,
-            creationTime: time * 1000
+            creationTime: (time * 1000)
         });
     }
 }
